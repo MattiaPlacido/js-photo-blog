@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+.row {
+  --bs-gutter-y: 1.5rem;
+}
+
 /* HEADER */
 .header {
   background-image: url("./img/wall.png");
@@ -29,7 +33,6 @@
 .post-card {
   min-height: 420px;
   position: relative;
-  margin-bottom: 3rem;
   box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.23);
 }
 
@@ -53,7 +56,34 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
   cursor: pointer;
   z-index: 2;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.overlay .post-image {
+  width: 85%;
+}
+
+.overlay .pin {
+  display: none;
+}
+
+/* RESPONSIVENESS
+/* MD */
+@media screen and (min-width: 768px) {
+  .overlay .post-image {
+    width: 65%;
+  }
+}
+/* LG */
+@media screen and (min-width: 992px) {
+  .overlay .post-image {
+    width: 45%;
+  }
 }

@@ -1,7 +1,7 @@
 //FUNCTIONS
 const overlayOnClick = (card, overlayHandler) => {
   card.addEventListener("click", () => {
-    if (isOverlayOn) {
+    if (overlayHandler) {
       card.classList.remove("overlay");
       overlayHandler = false;
     } else {
