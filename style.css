@@ -30,6 +30,7 @@
   min-height: 420px;
   position: relative;
   margin-bottom: 3rem;
+  box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.23);
 }
 
 .post-card > .pin {
