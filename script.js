@@ -1,12 +1,12 @@
 //FUNCTIONS
-const overlayOnClic = (card, overlayHandler) => {
+const overlayOnClick = (card, overlayHandler) => {
   card.addEventListener("click", () => {
     if (isOverlayOn) {
       card.classList.remove("overlay");
-      isOverlayOn = false;
+      overlayHandler = false;
     } else {
       card.classList.add("overlay");
-      isOverlayOn = true;
+      overlayHandler = true;
     }
   });
 };
@@ -35,6 +35,6 @@ fetch("https://jsonplaceholder.typicode.com/photos?_limit=" + postsNumber)
     //gestisco l'overlay quando si clicca sulle carte
     const postCardsEl = document.querySelectorAll(".post-card");
     postCardsEl.forEach((card) => {
-      overlayOnClic(card, isOverlayOn);
+      overlayOnClick(card, isOverlayOn);
     });
   });
