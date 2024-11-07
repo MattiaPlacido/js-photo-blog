@@ -1,0 +1,47 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER */
+.header {
+  background-image: url("./img/wall.png");
+}
+.header > h1 {
+  font-size: 5rem;
+  color: black;
+  /* da cambiare il font */
+}
+
+/* BODY */
+.body-wrapper {
+  background-image: url("./img/cork.png");
+}
+
+#posts-group {
+  max-width: 1200px;
+  height: 100vh;
+  /* Utilizzo i vh per far si che copra tutto lo schermo in giu */
+  margin: auto;
+}
+
+.post-card {
+  min-height: 420px;
+  position: relative;
+}
+
+.post-card > .pin {
+  position: absolute;
+  left: calc(50% - 1.2rem);
+  top: -1rem;
+}
+
+.post-card > .post-image {
+  padding: 1.2rem;
+  padding-bottom: 0.3rem;
+}
+.post-card > p {
+  padding: 0 1.2rem;
+}
