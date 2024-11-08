@@ -34,7 +34,6 @@
 .post-card {
   min-height: 420px;
   position: relative;
-  cursor: pointer;
   box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.23);
   font-family: "Edu TAS Beginner", serif;
   font-size: 1.2rem;
@@ -44,6 +43,7 @@
   transform: scale(1.1) rotate(10deg);
   z-index: 1;
   box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 .post-card .pin {
