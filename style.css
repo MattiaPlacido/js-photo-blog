@@ -16,12 +16,13 @@
 .header > h1 {
   font-size: 5rem;
   color: black;
-  /* da cambiare il font */
+  font-family: "Edu TAS Beginner", serif;
 }
 
 /* BODY */
 .body-wrapper {
   background-image: url("./img/cork.png");
+  padding: 20px 100px;
 }
 
 #posts-group {
@@ -33,23 +34,37 @@
 .post-card {
   min-height: 420px;
   position: relative;
+  cursor: pointer;
   box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.23);
+  font-family: "Edu TAS Beginner", serif;
+  font-size: 1.2rem;
 }
 
-.post-card > .pin {
+.post-card:hover:not(.overlay) {
+  transform: scale(1.1) rotate(10deg);
+  z-index: 1;
+  box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.5);
+}
+
+.post-card .pin {
   position: absolute;
   left: calc(50% - 1.2rem);
   top: -1rem;
 }
 
-.post-card > .post-image {
+.post-card:hover .pin {
+  display: none;
+}
+
+.post-card .post-image {
   padding: 1.2rem;
   padding-bottom: 0.3rem;
 }
-.post-card > p {
+.post-card p {
   padding: 0 1.2rem;
 }
 
+/* OVERLAY */
 .overlay {
   position: fixed;
   top: 0;
@@ -57,8 +72,7 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.9);
-  cursor: pointer;
-  z-index: 2;
+  z-index: 1;
   border-radius: 0;
   display: flex;
   align-items: center;
@@ -74,16 +88,33 @@
   display: none;
 }
 
+[id^="overlay-exit"] {
+  position: fixed;
+  z-index: 1;
+  top: 5%;
+  left: 88%;
+  right: 0;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+}
+
 /* RESPONSIVENESS
 /* MD */
 @media screen and (min-width: 768px) {
   .overlay .post-image {
     width: 65%;
   }
+  .post-card:hover:not(.overlay) {
+    transform: scale(1.2) rotate(10deg);
+  }
 }
 /* LG */
 @media screen and (min-width: 992px) {
   .overlay .post-image {
     width: 45%;
+  }
+  .post-card:hover:not(.overlay) {
+    transform: scale(1.3) rotate(10deg);
   }
 }
