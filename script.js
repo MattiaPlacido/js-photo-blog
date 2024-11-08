@@ -9,7 +9,7 @@ const overlayOnClick = (card, button) => {
   });
   //click sul bottone per uscire
   if (button.classList.contains("d-none")) {
-    button.addEventListener("click", (event) => {
+    button.addEventListener("click", () => {
       button.classList.add("d-none");
       card.classList.remove("overlay");
     });
